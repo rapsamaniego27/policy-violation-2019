@@ -5,8 +5,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pikaday.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/pikaday.css') }}">
 
         <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -28,24 +28,23 @@
             <a href="{{ route('profile') }}" class="has-text-white is-size-5"><i class="fa fa-user"></i> Profile</a>
             </li>
             <li>
-                <a href="#" class="has-text-white is-size-5"> <i class="fa fa-book"></i> Subjects</a>
+            <a href="{{ route('subjects')}}" class="has-text-white is-size-5"> <i class="fa fa-book"></i> Subjects</a>
             </li>
             <li>
                 <a class="has-text-white is-size-5 menu-link"> <i class="fa fa-chalkboard-teacher"></i> Classes</a>
                 <ul class="menu-sublinks">
-                <li><a class="has-text-white is-size-6">View classes</a></li>
-                <li><a class="has-text-white is-size-6">Add class</a></li>
+                <li><a href="{{ route('view-classes') }}" class="has-text-white is-size-6">View classes</a></li>
+                <li><a href="" class="has-text-white is-size-6">Add class</a></li>
                 </ul>
             </li>
             <li>
                 <a class="has-text-white is-size-5 menu-link" > <i class="fa fa-fist-raised"></i> Policies</a>
                 <ul class="menu-sublinks">
-                <li><a class="has-text-white is-size-6">View policies</a></li>
+                <li><a href="#" class="has-text-white is-size-6">View policies</a></li>
                 <li><a class="has-text-white is-size-6">Add policy</a></li>
-                <li><a class="has-text-white is-size-6">Delete class</a></li>
                 </ul>
             </li>
-            <li><a class="has-text-white is-size-5"> <i class="fa fa-chart-bar"></i> Reports</a></li>
+            <li><a href="{{ route('reports') }}" class="has-text-white is-size-5"> <i class="fa fa-chart-bar"></i> Reports</a></li>
             </ul>
 
         </aside>
@@ -112,6 +111,6 @@
   
   <script src="https://kit.fontawesome.com/e33b567028.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-  <script src="app.js"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

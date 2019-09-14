@@ -1,5 +1,5 @@
 @extends('default')
 
 @section('content')
-Subjects
+Reports
 @endsection

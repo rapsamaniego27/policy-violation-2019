@@ -11,14 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+/* Route::get('/', function () {
+    return view('login');
+}); */
 
 
-Auth::routes();
+Route::get('/', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+
+/* Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home'); */
+

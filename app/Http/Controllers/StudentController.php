@@ -81,4 +81,14 @@ class StudentController extends Controller
     {
         //
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function getSubjects(){
+        return view('student.subjects');
+    }
+
 }

@@ -81,4 +81,8 @@ class AdminController extends Controller
     {
         //
     }
+
+    public function getReports(){
+        return view('admin.reports');
+    }
 }

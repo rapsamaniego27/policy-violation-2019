@@ -81,4 +81,9 @@ class FacultyController extends Controller
     {
         //
     }
+
+    public function getClasses(){
+        return view('faculty.view-classes');
+    }
+
 }

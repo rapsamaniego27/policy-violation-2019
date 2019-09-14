@@ -1,5 +1,7 @@
 @extends('default')
 
 @section('content')
-Subjects
+
+View Classes
+
 @endsection
