@@ -1,0 +1,60 @@
+.login-container{
+  margin-top:2em;
+}
+
+.btn-login--container{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.admin-panel{
+  height:100vh;
+}
+
+/* ANimations */
+.menu-sublinks{
+  height:0;
+  opacity:0;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-sublinks--show{
+  opacity:1;
+  height:100px;
+}
+
+.menu-list li a:hover{
+  color:#000 !important;
+}
+
+aside{
+  margin:2em 1em;
+}
+
+.nav-greeting{
+  margin:0.4em 1em;
+}
+
+.content{
+  padding: 1em;
+}
+
+.columns.is-gapless:not(:last-child) {
+    margin-bottom: -1.5rem !important;
+}
+
+.form{
+  margin:2em 3em;
+}
+
+.content-title{
+  margin-left:2em;
+}
+
+.menu-list li{
+  margin-bottom:1.3em;
+}
+
+.navbar-item{
+  margin-right:2.5em;
+}
