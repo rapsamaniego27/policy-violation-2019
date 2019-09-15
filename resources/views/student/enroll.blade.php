@@ -13,25 +13,26 @@
 
             <div class="field">
               <div class="control">
-                <input class="input is-danger" type="text" placeholder="First Name" name="first_name">
+              <input class="input {{ $errors->has('first_name') ? ' is-danger' : '' }}" type="text" placeholder="First Name" name="first_name" value="{{ old('first_name') }}">
               </div>
-              <p class="help is-danger">
-                This field is required
-              </p>
+              @if($errors->has('first_name'))
+                <p class="help is-danger">
+                   {{$errors->first('first_name')}}
+                </p>
+              @endif
+              
             </div>
 
             <div class="field">
               <div class="control">
-                <input class="input" type="text" placeholder="Middle Name">
+              <input class="input {{ $errors->has('last_name') ? ' is-danger' : '' }}" type="text" placeholder="Last Name" name="last_name" value="{{ old('last_name') }}">
               </div>
-
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <input class="input" type="text" placeholder="Last Name">
-              </div>
-
+              @if($errors->has('last_name'))
+                <p class="help is-danger">
+                   {{$errors->first('last_name')}}
+                </p>
+              @endif
+              
             </div>
 
 
@@ -87,6 +88,34 @@
           </div>
         </div>
 
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Password:</label>
+          </div>
+          <div class="field-body">
+
+            <div class="field">
+              <div class="control">
+              <input class="input {{ $errors->has('password') ? ' is-danger' : '' }}" type="password" placeholder="Password" name="password" >
+              </div>
+              @if($errors->has('password'))
+                <p class="help is-danger">
+                   {{$errors->first('password')}}
+                </p>
+              @endif
+              
+            </div>
+
+            <div class="field">
+              <div class="control">
+              <input class="input" type="text" placeholder="Confirm Password" name="confirm_password">
+              </div>
+      
+            </div>
+
+          </div>
+        </div>
+
 
         <div class="field is-horizontal">
           <div class="field-label">
@@ -96,7 +125,7 @@
             <div class="field">
               <div class="control">
                 <button class="button is-primary">
-                  Update
+                  Enroll
                 </button>
               </div>
             </div>

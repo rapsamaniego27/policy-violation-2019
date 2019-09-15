@@ -16,6 +16,7 @@ class StudentsTableSeeder extends Seeder
     {
         $student = Student::create([
             'first_name' => 'Peter',
+            'last_name' => 'Parker',
             'email' => 'peter@gmail.com',
             'password' => Hash::make('password')
         ]);

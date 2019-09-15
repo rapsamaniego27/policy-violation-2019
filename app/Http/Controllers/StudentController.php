@@ -99,13 +99,18 @@ class StudentController extends Controller
     
     public function postEnroll()
     {
-      $student = new Student();
-      
+
+      request()->validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'password' => 'required|min:6'
+      ]);
 
       Student::create([
          'first_name' => request('first_name'),
+         'last_name' => request('last_name'),
          'email' => 'fisdf_name@gmail.com',
-         'password' => 'password'
+         'password' => request('password')
       ]);
 
       return redirect()->route('post-enroll');
