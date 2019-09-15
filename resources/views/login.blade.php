@@ -1,11 +1,11 @@
-@extends('default')
+@extends('index')
 
 @section('content')
 
  <div class="column is-4 is-offset-4 login-container">
       <article class="message">
         <div class="message-header">
-          <p>Login</p>
+          <p>Policy Violation</p>
           
         </div>
         <div class="message-body">
@@ -31,7 +31,7 @@
             </div>
             <div class="field btn-login--container">
               <p class="control">
-                <button class="button is-success">
+                <button type="submit" class="button is-primary">
                   Login
                 </button>
               </p>

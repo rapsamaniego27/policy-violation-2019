@@ -91,4 +91,9 @@ class StudentController extends Controller
         return view('student.subjects');
     }
 
+    public function getEnroll()
+    {
+        return view('student.enroll');
+    }
+
 }

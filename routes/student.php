@@ -7,4 +7,6 @@
     
     Route::get('subjects', 'StudentController@getSubjects')->name('subjects');
 
+    Route::get('enroll', 'StudentController@getEnroll')->name('enroll');
+
   });

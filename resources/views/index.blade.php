@@ -18,7 +18,7 @@
 <body>
   <div class="columns admin-panel is-gapless">
 
-   {{--  @if(Auth::check()) --}}
+    @if(Auth::check())
 
         <!-- Col Navigation -->
         <div class="column is-one-fifth has-background-grey-dark menu-container">
@@ -49,17 +49,16 @@
 
         </aside>
         </div>
-    {{--  @endif --}}
+     @endif
     <!-- Col Content -->
     <div class="column">
       <!-- Row Nav -->
       <nav class="navbar has-background-primary" role="navigation" aria-label="main navigation">
       
-           @if(Auth::check())
-            <div class="navbar-brand">
+           <div class="navbar-brand">
             
-            <a class="navbar-item has-text-white" href="https://bulma.io">
-              <strong>Logo</strong>
+           <a class="navbar-item has-text-white" href="{{ route('login') }}">
+              <strong>Policy Violation</strong>
             </a>
            
           
@@ -70,7 +69,6 @@
               <span aria-hidden="true"></span>
             </a>
           </div> 
-          @endif
 
 
           <div id="navbarBasicExample" class="navbar-menu">
@@ -92,8 +90,8 @@
                             Log out
                        </a>
                     @else
-                       <a href="{{ url('/register') }}" class="button is-primary">Enroll</a>   
-                        <a href="{{ url('/login') }}" class="button is-light">Login</a>
+                       <a href="{{ route('enroll') }}" class="button is-primary">Enroll</a>   
+                        <a href="{{ route('login') }}" class="button is-light">Login</a>
                     @endif
                 </div>
               </div>
