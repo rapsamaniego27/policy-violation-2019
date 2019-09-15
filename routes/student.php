@@ -9,4 +9,7 @@
 
     Route::get('enroll', 'StudentController@getEnroll')->name('enroll');
 
+    Route::post('enroll', 'StudentController@postEnroll')->name('post-enroll');
+
+    
   });

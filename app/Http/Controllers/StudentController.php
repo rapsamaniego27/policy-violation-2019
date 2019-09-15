@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Student;
 
 class StudentController extends Controller
 {
@@ -94,6 +95,21 @@ class StudentController extends Controller
     public function getEnroll()
     {
         return view('student.enroll');
+    }
+    
+    public function postEnroll()
+    {
+      $student = new Student();
+      
+
+      Student::create([
+         'first_name' => request('first_name'),
+         'email' => 'fisdf_name@gmail.com',
+         'password' => 'password'
+      ]);
+
+      return redirect()->route('post-enroll');
+
     }
 
 }

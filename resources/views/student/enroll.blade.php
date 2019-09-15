@@ -4,7 +4,7 @@
 
 <h1 class="is-size-1 content-title">Enrollment</h1>
 
-      <form action="/" method="POST" class="form">
+      <form action="{{ route('post-enroll') }}" method="POST" class="form">
         <div class="field is-horizontal">
           <div class="field-label is-normal">
             <label class="label">Name:</label>
@@ -13,7 +13,7 @@
 
             <div class="field">
               <div class="control">
-                <input class="input is-danger" type="text" placeholder="First Name">
+                <input class="input is-danger" type="text" placeholder="First Name" name="first_name">
               </div>
               <p class="help is-danger">
                 This field is required
@@ -102,6 +102,8 @@
             </div>
           </div>
         </div>
+
+        @csrf
       </form>
 
 @endsection
