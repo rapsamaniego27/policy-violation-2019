@@ -58,7 +58,7 @@
            <div class="navbar-brand">
             
            <a class="navbar-item has-text-white" href="{{ route('login') }}">
-              <strong>Policy Violation</strong>
+              <strong>Logo</strong>
             </a>
            
           

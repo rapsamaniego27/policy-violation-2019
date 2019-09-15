@@ -1,4 +1,4 @@
-@extends('default')
+@extends('index')
 
 @section('content')
   Profile
